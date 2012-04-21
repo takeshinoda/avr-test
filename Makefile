@@ -1,5 +1,5 @@
-PRG            = demo
-OBJ            = demo.o
+PRG            = main
+OBJ            = main.o
 #MCU_TARGET     = at90s2313
 #MCU_TARGET     = at90s2333
 #MCU_TARGET     = at90s4414
@@ -19,7 +19,7 @@ OBJ            = demo.o
 #MCU_TARGET     = atmega168
 #MCU_TARGET     = atmega169
 #MCU_TARGET     = atmega169p
-#MCU_TARGET     = atmega2560
+MCU_TARGET     = atmega2560
 #MCU_TARGET     = atmega2561
 #MCU_TARGET     = atmega32
 #MCU_TARGET     = atmega324p
@@ -36,7 +36,7 @@ OBJ            = demo.o
 #MCU_TARGET     = atmega6450
 #MCU_TARGET     = atmega649
 #MCU_TARGET     = atmega6490
-MCU_TARGET     = atmega8
+#MCU_TARGET     = atmega8
 #MCU_TARGET     = atmega8515
 #MCU_TARGET     = atmega8535
 #MCU_TARGET     = atmega88
@@ -74,7 +74,7 @@ $(PRG).elf: $(OBJ)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS)
 
 # dependency:
-demo.o: demo.c iocompat.h
+main.o: main.c
 
 clean:
 	rm -rf *.o $(PRG).elf *.eps *.png *.pdf *.bak 
